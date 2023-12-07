@@ -1,0 +1,3 @@
+https://unsplash.com/photos/red-textile-in-close-up-photography-CtlZ68KBDIo?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash
+https://css-tricks.com/reverse-text-color-mix-blend-mode/#:~:text=With%20the%20difference%20blend%20mode,blend%2Dmode%20property%20can%20be.
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
