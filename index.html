@@ -10,111 +10,212 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Icons -->
+  <!-- icons -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   
-  <!-- Fonts -->
+  <!-- fonts -->
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Merriweather&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Merriweather&family=Unica+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
-  <!-- main logo / nav -->
+
   <header class="cover">
-    <h1 id="name">Jai Gandhi</h1>
-    <nav id="navbar">    
-        <div id="link1" class="navlink">
-          <div></div>
-          <p class="link">// <a href="#aboutme">ABOUT ME</a></p>
-          <span class="material-symbols-rounded">
-            account_circle
-            </span>
-        </div>
-        <div id="link2" class="navlink">
-          <div></div>
-          <p class="link">// <a href="#projects">PROJECTS</a></p>
-          <span class="material-symbols-rounded">
-            edit_note
-            </span>
-        </div>
-        <div id="link3" class="navlink">
-          <div></div>
-          <p class="link">// <a href="#contact">CONTACT</a></p>
-          <span class="material-symbols-rounded">
-            alternate_email
-            </span>
-        </div>
-        <div id="link4" class="navlink">
-          <div></div>
-          <p class="link">// <a href="#cv">CV</a></p>
-          <span class="material-symbols-rounded">
-            description
-            </span>
-        </div>
-        <div id="link5" class="navlink">
-          <div></div>
-          <p class="link">// <a href="#art">ART</a></p>
-          <span class="material-symbols-rounded">
-            palette
-            </span>
-        </div>
-        <div id="link6" class="navlink">
-          <div></div>
-          <p class="link">// HELP</p> 
-          <span class="material-symbols-rounded">
-            help
-            </span>
-        </div>
+    <!-- main title -->
+    <h1 id="name"><a target="_blank" href="https://cat-bounce.com/">Jai Gandhi</a></h1>
+
+    <!-- navbar -->
+    <nav id="navbar">
+      <!-- about me nav link -->
+      <div id="link1" class="navlink">
+        <a href="#aboutme" class="link">// ABOUT ME</a>
+        <div></div>
+        <span class="material-symbols-rounded">
+          account_circle
+        </span>
+      </div>
+      <!-- projects nav link -->
+      <div id="link2" class="navlink">
+        <a href="#projects" class="link">// PROJECTS</a>
+        <div></div>
+        <span class="material-symbols-rounded">
+          edit_note
+        </span>
+      </div>
+      <!-- contact details nav link -->
+      <div id="link3" class="navlink">
+        <a href="#contact" class="link">// CONTACT</a>
+        <div></div>
+        <span class="material-symbols-rounded">
+          alternate_email
+        </span>
+      </div>
+      <!-- cv nav link -->
+      <div id="link4" class="navlink">
+        <a href="#cv" class="link">// CV</a>
+        <div></div>
+        <span class="material-symbols-rounded">
+          description
+        </span>
+      </div>
+      <!-- art portfolio nav link -->
+      <div id="link5" class="navlink">
+        <a href="#art" class="link">// ART</a>
+        <div></div>
+        <span class="material-symbols-rounded">
+          palette
+        </span>
+      </div>
+      <!-- help nav link -->
+      <div id="link6" class="navlink">
+        <a href="#help" class="link">// HELP</a>
+        <div></div>
+        <span class="material-symbols-rounded">
+          help
+        </span>
+      </div>
     </nav>
   </header>
 
-<!-- flexbox containing a profile picture and the about me section -->
+  <main class="page-wrapper">
+    <!-- about me -->
+    <section class="page-section" id="aboutme">
+      <h2>About Me</h2>
 
-<main class="page-wrapper">
-  <!-- about me -->
-  <section class="page-section" id="aboutme">
-    <h2>About Me</h2>
-  </section>
+      <h3>Skills</h3>
+      <p>languages/skills learnt from bootcamp: e.g. html, css, git, jss</p>
+    </section>
 
-  <!-- projects -->
-  <section class="page-section" id="projects">
-    <h2>Projects</h2>
-  </section>
+    <!-- projects -->
+    <section class="page-section" id="projects">
+      <h2>Projects</h2>
+      <!-- grid display -->
+      <section id="featureProj">
+        <div class="featureProjArea" id="image"><a href="#" target="_blank"><img src="./images/codioful-formerly-gradienta-uDaW2aMISB4-unsplash.jpg"></a></div>
+        <div class="featureProjArea" id="title">
+          <h3>Featured Project</h3>
+        </div>
+        <div class="featureProjArea" id="desc">
+          <p>This is placeholder text for describing what the project was about.</p>
+        </div>
+        <div class="featureProjArea" id="projskills">
+          <img id="htmlbadge" src="./images/html5badge.svg">
+          <img id="cssbadge" src="./images/cssbadge.svg">
+          <img id="jsbadge" src="./images/javascript badge.svg">
+          <img id="githubbadge" src="./images/githubbadge.svg">
+          <img id="gitlabbadge" src="./images/gitlabbadge.svg">
+        </div>
+      </section>
+      <!-- other projects flexbox -->
+      <section id="otherprojflex">
+        <div class="otherprojflexarea" id="proj2flex">
+          <div class="otherprojflexelement" id="projfleximage">
+            <img src="./images/codioful-formerly-gradienta-uDaW2aMISB4-unsplash.jpg">
+          </div>
+          <div class="otherprojflexelement" id="projskills">
+            <img id="htmlbadge" src="./images/html5badge.svg">
+            <img id="cssbadge" src="./images/cssbadge.svg">
+            <img id="jsbadge" src="./images/javascript badge.svg">
+            <img id="githubbadge" src="./images/githubbadge.svg">
+            <img id="gitlabbadge" src="./images/gitlabbadge.svg">
+          </div>
+          <div class="otherprojflexelement" id="projflexdesc">
+            <h3>Project Title</h3>
+            <p>A short project description.</p>
+          </div>
+        </div>
+        <div class="otherprojflexarea" id="proj3flex">
+          <div class="otherprojflexelement" id="projfleximage">
+            <img src="./images/codioful-formerly-gradienta-uDaW2aMISB4-unsplash.jpg">
+          </div>
+          <div class="otherprojflexelement" id="projskills">
+            <img id="htmlbadge" src="./images/html5badge.svg">
+            <img id="cssbadge" src="./images/cssbadge.svg">
+            <img id="jsbadge" src="./images/javascript badge.svg">
+            <img id="githubbadge" src="./images/githubbadge.svg">
+            <img id="gitlabbadge" src="./images/gitlabbadge.svg">
+          </div>
+          <div class="otherprojflexelement" id="projflexdesc">
+            <h3>Project Title</h3>
+            <p>A short project description.</p>
+          </div>
+        </div>
+        <div class="otherprojflexarea" id="proj4flex">
+          <div class="otherprojflexelement" id="projfleximage">
+            <img src="./images/codioful-formerly-gradienta-uDaW2aMISB4-unsplash.jpg">
+          </div>
+          <div class="otherprojflexelement" id="projskills">
+            <img id="htmlbadge" src="./images/html5badge.svg">
+            <img id="cssbadge" src="./images/cssbadge.svg">
+            <img id="jsbadge" src="./images/javascript badge.svg">
+            <img id="githubbadge" src="./images/githubbadge.svg">
+            <img id="gitlabbadge" src="./images/gitlabbadge.svg">
+          </div>
+          <div class="otherprojflexelement" id="projflexdesc">
+            <h3>Project Title</h3>
+            <p>A short project description.</p>
+          </div>
+        </div>
+        <div class="otherprojflexarea" id="proj5flex">
+          <div class="otherprojflexelement" id="projfleximage">
+            <img src="./images/codioful-formerly-gradienta-uDaW2aMISB4-unsplash.jpg">
+          </div>
+          <div class="otherprojflexelement" id="projskills">
+            <img id="htmlbadge" src="./images/html5badge.svg">
+            <img id="cssbadge" src="./images/cssbadge.svg">
+            <img id="jsbadge" src="./images/javascript badge.svg">
+            <img id="githubbadge" src="./images/githubbadge.svg">
+            <img id="gitlabbadge" src="./images/gitlabbadge.svg">
+          </div>
+          <div class="otherprojflexelement" id="projflexdesc">
+            <h3>Project Title</h3>
+            <p>A short project description.</p>
+          </div>
+        </div>
+      </section>
+    </section>
 
-  <!-- contact -->
-  <section class="page-section" id="contact">
-    <h2>Contact</h2>
-  </section>
+    <!-- cv -->
+    <section class="page-section" id="cv">
+      <h2>CV</h2>
+      <br>
+      <p>embed CV pdf</p>
+    </section>
+    
+    <!-- contact -->
+    <section class="page-section" id="contact">
+      <h2>Contact</h2>
+      <br>
+      <p>Contact details: linkedin, github, email, phone, insta?</p>
+    </section>
 
-  <!-- contact -->
-  <section class="page-section" id="art">
-    <h2>Art</h2>
-  </section>
+    <!-- art -->
+    <section class="page-section" id="art">
+      <h2>Art</h2>
+      <br>
+      <p>embed art portfolio?</p>
+    </section>
 
-  <!-- art -->
-  <section class="page-section" id="cv">
-    <h2>CV</h2>
-  </section>
+    <!-- help -->
+    <section class="page-section" id="help">
+      <h2>Help</h2>
+      <br>
+      <p>Github issues page?</p>
+    </section>
 
-  <!-- help -->
-  <section class="page-section" id="help">
-    <h2>Help</h2>
-  </section>
-
-
-  <!-- back to top element -->
-  <nav id="return">
-    <a href='#'>
-      <span class="material-symbols-rounded">
-        arrow_circle_up
-      </span>
-    </a>
-  </nav>
+    <!-- back to top element -->
+    <nav id="return">
+      <a href='#'>
+        <span class="material-symbols-rounded">
+          arrow_circle_up
+        </span>
+      </a>
+    </nav>
 
 
   </main>
