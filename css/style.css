@@ -1,9 +1,49 @@
 * {
   box-sizing: border-box;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Inter', sans-serif;
   color:#364859;
+  scroll-behavior: smooth;
 }
 
+a {
+  color:#364859;
+  text-decoration: none;
+}
+
+/* animations */
+@keyframes title {
+  from {letter-spacing: 32px;}
+  to {letter-spacing: 0;}
+}
+
+@keyframes navlinks {
+  from {letter-spacing: normal;}
+  to {letter-spacing: 1.2px;}
+}
+/* --- */
+
+
+/* icons */
+.material-symbols-rounded {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 350,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+nav#return .material-symbols-rounded {
+  color:#970149;
+  mix-blend-mode: difference;
+}
+
+nav#return .material-symbols-rounded:hover {
+  color: #364859;
+  cursor: pointer;
+}
+/* --- */
+
+/* general */
 body {
   margin: 0;
   padding: 0;
@@ -12,6 +52,26 @@ body {
   background-color: #CBC9CF;
 }
 
+nav#return{
+  position: fixed;
+  bottom: 2.5%;
+  right: 2.5%;
+  margin: auto;
+  height:100px;
+  width:100px;
+  z-index: 50;
+}
+
+h3{
+  font-family: 'Roboto Mono', monospaced;
+  font-size: 45px;
+  letter-spacing: 7px;
+  font-weight: 350;
+  text-transform: uppercase;
+}
+/* --- */
+
+/* cover page */
 .cover{
   display:flex;
   align-items: center;
@@ -21,24 +81,26 @@ body {
   background-image: url(../images/anton-CtlZ68KBDIo-unsplash.jpg);
   background-position: center;
   background-size: cover;
-  z-index: 100;
 }
 
-#pfp{
-  max-height: 100px;
-  border-radius: 25%;
-}
-
-header.cover h1#name {
+header.cover h1#name a {
   font-family: 'Unica One', sans-serif;
-  font-size: 150px;
+  font-size: 250px;
   margin: 10px;
-  mix-blend-mode: difference;
+  /* color:rgb(245, 61, 255); */
+  /* mix-blend-mode: difference; */
+  cursor: pointer;
+  background: url(https://i.pinimg.com/originals/84/d8/7e/84d87eb7e536135161c55887d878d44b.gif);
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: title 5s ease 1;
 }
 
 #navbar{
   display:grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 180px 180px 180px;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: 
     "link1 link2 link3"
@@ -64,15 +126,8 @@ header.cover h1#name {
     "empty icons"
     "text text"
   ;
-  font-family: 'Unica One', sans-serif;
-  font-size: 15px;
   margin:10px 20px;
   justify-items: right;
-}
-
-a {
-  color:#364859;
-  text-decoration: none;
 }
 
 .icons{
@@ -82,19 +137,27 @@ a {
 .link{
   grid-area: text;
   border-radius:5px;
-  padding:5px;
+  font-family: 'Roboto Mono', monospaced;
+  font-size: 15px;
+  padding: 5px;
   border: rgba(0,0,0,0) solid 2px;
 }
 
 .link:hover, .a:hover{
   grid-area: text;
+  font-family: 'Roboto Mono', monospaced;
+  font-size: 15px;
   border-radius: 5px;
   padding:5px;
-  border:aliceblue solid 2px;
-  color:aliceblue;
+  border:#d74c7d solid 2px;
+  color:rgb(253, 189, 189);
   cursor: pointer;
+  animation: navlinks 1s ease 1;
+  animation-fill-mode: forwards;
 }
+/* --- */
 
+/* pages */
 .page-section{
   height:100vh;
   text-align: center;
@@ -102,47 +165,148 @@ a {
 }
 
 .page-section h2{
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Merriweather', serif;
   font-weight: 400;
   font-size: 50px;
-  text-transform: uppercase;
+  padding:3vh 0 1vh 0;
+}
+/* --- */
+
+
+/* projects page */
+#featureProj{
+  display: grid;
+  margin: 0px 8%;
+  height:50vh;
+  /* gap:15px; */
+  align-self:center;
+  justify-self: center;
+  grid-template-rows: 50% 40% 10%;
+  grid-template-columns: 65% 35%;
+  grid-template-areas: 
+    "image title"
+    "image desc"
+    "image skills"
+    ;
+  /* border:red solid 1px; */
 }
 
-nav#return{
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  margin: auto;
-  height:100px;
-  width:100px;
-  z-index: 50;
+.featureProjArea{
+  align-items: center;
+  position: relative;
 }
 
-/* Icons */
-.material-symbols-rounded {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 350,
-  'GRAD' 0,
-  'opsz' 24
+.featureProjArea#image{
+  grid-area: image;
+  border-radius: 15px;
 }
 
-.material-symbols-rounded {
-  color:#364859;
-  }
+.featureProjArea#image img{
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+}
 
-nav#return .material-symbols-rounded:hover {
-  color: whitesmoke;
+.featureProjArea#image img:hover, .otherprojflexelement#projfleximage img:hover{
+  transition: 0.20s;
+  transition-timing-function: ease;
+  transform-origin: ce;
+  opacity: 0.5;
+  border:#970149 solid 4px;
   cursor: pointer;
 }
 
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
+.featureProjArea#title{
+  grid-area: title;
+  align-self: end;
+  justify-self: left;
+  padding:0 2.5%;
+  /* border: black solid 1px; */
 }
 
-p {
-  margin: 0;
+.featureProjArea#desc{
+  grid-area: desc;
+  align-self:start;
+  justify-self: left;
+  padding:0 2.5%;
+  /* border: black solid 1px; */
+}
+
+.featureProjArea#projskills{
+  grid-area:skills;
+  display:flex;
+  justify-content: left;
+  align-content: center;
+  padding:0 2.5%;
+  /* border: black solid 1px; */
+}
+
+/* other projects beneath featured proj */
+#otherprojflex{
+  margin:15px 8%;
+  display:flex;
+  min-height:300px;
+  height:30vh;
+  /* border:black solid 1px; */
+  align-self:center;
+  justify-self: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.otherprojflexarea{
+  height:100%;
+  width:20%;
+  /* border:black solid 1px; */
+  display:flex;
+  flex-direction: column;
+}
+
+.otherprojflexelement{
+  margin:1% 0;
+  /* border: black solid 1px; */
+  border-radius:10px;
+}
+
+.otherprojflexelement#projfleximage{
+  height:60%;
+  max-height:60%;
+}
+
+.otherprojflexelement#projskills{
+  height:10%;
+  display:flex;
+  justify-content: left;
+  align-items: center;
+}
+
+#projskills img{
+  padding:0 1% 0 0;
+  max-height: 70%;  
+}
+
+.otherprojflexelement#projfleximage img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.otherprojflexelement#projflexdesc{
+  display:flex;
+  flex-direction: column;
+  max-height: 30%;
+  height:30%;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.otherprojflexelement#projflexdesc h3{
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.otherprojflexelement#projflexdesc p{
+  font-size: 12px;
 }
