@@ -14,11 +14,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   
   <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Merriweather&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee&family=Bungee+Shade&family=DM+Serif+Display&family=Fugaz+One&family=Gabarito&family=Inter&family=Noto+Serif+Display&family=Roboto+Mono&family=Unica+One&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="./css/style.css" />
 </head>
@@ -83,6 +79,53 @@
   </header>
 
   <main class="page-wrapper">
+    <br>
+    <nav id="navtop">
+      <!-- about me nav link -->
+      <div id="link1" class="navtoplink">
+        <a href="#aboutme" class="link">// ABOUT ME</a>
+        <span class="material-symbols-rounded">
+          account_circle
+        </span>
+      </div>
+      <!-- projects nav link -->
+      <div id="link2" class="navtoplink">
+        <a href="#projects" class="link">// PROJECTS</a>
+        <span class="material-symbols-rounded">
+          edit_note
+        </span>
+      </div>
+      <!-- contact details nav link -->
+      <div id="link3" class="navtoplink">
+        <a href="#contact" class="link">// CONTACT</a>
+        <span class="material-symbols-rounded">
+          alternate_email
+        </span>
+      </div>
+      <!-- cv nav link -->
+      <div id="link4" class="navtoplink">
+        <a href="#cv" class="link">// CV</a>
+        <span class="material-symbols-rounded">
+          description
+        </span>
+      </div>
+      <!-- art portfolio nav link -->
+      <div id="link5" class="navtoplink">
+        <a href="#art" class="link">// ART</a>
+        <span class="material-symbols-rounded">
+          palette
+        </span>
+      </div>
+      <!-- help nav link -->
+      <div id="link6" class="navtoplink">
+        <a href="#help" class="link">// HELP</a>
+        <span class="material-symbols-rounded">
+          help
+        </span>
+      </div>
+    </nav>
+
+
     <!-- about me -->
     <section class="page-section" id="aboutme">
       <h2>About Me</h2>
@@ -96,85 +139,85 @@
       <h2>Projects</h2>
       <!-- grid display -->
       <section id="featureProj">
-        <div class="featureProjArea" id="image"><a href="#" target="_blank"><img src="./images/codioful-formerly-gradienta-uDaW2aMISB4-unsplash.jpg"></a></div>
+        <div class="featureProjArea" id="image"><a href="#" target="_blank"><img src="./images/furnitureweb.png"></a></div>
         <div class="featureProjArea" id="title">
-          <h3>Featured Project</h3>
+          <h3 id="subtitle">CSS Exercise: Furniture Website</h3>
         </div>
         <div class="featureProjArea" id="desc">
-          <p>This is placeholder text for describing what the project was about.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos eligendi et quas at, atque labore eius, consequuntur hic consectetur suscipit excepturi. Pariatur perferendis ut voluptatum fugiat debitis minus iste ab?</p>
         </div>
         <div class="featureProjArea" id="projskills">
-          <img id="htmlbadge" src="./images/html5badge.svg">
-          <img id="cssbadge" src="./images/cssbadge.svg">
-          <img id="jsbadge" src="./images/javascript badge.svg">
-          <img id="githubbadge" src="./images/githubbadge.svg">
-          <img id="gitlabbadge" src="./images/gitlabbadge.svg">
+          <div id="badge"><img id="htmlbadge" src="./images/html5badge.svg"></div>
+          <div id="badge"><img id="cssbadge" src="./images/cssbadge.svg"></div>
+          <!-- <div id="badge"><img id="jsbadge" src="./images/javascript badge.svg"></div> -->
+          <div id="badge"><img id="githubbadge" src="./images/githubbadge.svg"></div>
+          <!-- <div id="badge"><img id="gitlabbadge" src="./images/gitlabbadge.svg"></div> -->
         </div>
       </section>
       <!-- other projects flexbox -->
       <section id="otherprojflex">
         <div class="otherprojflexarea" id="proj2flex">
           <div class="otherprojflexelement" id="projfleximage">
-            <img src="./images/codioful-formerly-gradienta-uDaW2aMISB4-unsplash.jpg">
+            <img src="./images/preworkstudy.png">
           </div>
           <div class="otherprojflexelement" id="projskills">
-            <img id="htmlbadge" src="./images/html5badge.svg">
-            <img id="cssbadge" src="./images/cssbadge.svg">
-            <img id="jsbadge" src="./images/javascript badge.svg">
-            <img id="githubbadge" src="./images/githubbadge.svg">
-            <img id="gitlabbadge" src="./images/gitlabbadge.svg">
+            <div id="badge"><img id="htmlbadge" src="./images/html5badge.svg"></div>
+            <!-- <div id="badge"><img id="cssbadge" src="./images/cssbadge.svg"></div> -->
+            <!-- <div id="badge"><img id="jsbadge" src="./images/javascript badge.svg"></div> -->
+            <div id="badge"><img id="githubbadge" src="./images/githubbadge.svg"></div>
+            <!-- <div id="badge"><img id="gitlabbadge" src="./images/gitlabbadge.svg"></div> -->
           </div>
           <div class="otherprojflexelement" id="projflexdesc">
-            <h3>Project Title</h3>
-            <p>A short project description.</p>
+            <h3>Skills Camp Study Guide</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus tempora obcaecati nam asperiores illum est, minus maiores voluptates sit ullam deserunt in odio quibusdam impedit distinctio vitae cum atque laborum!</p>
           </div>
         </div>
         <div class="otherprojflexarea" id="proj3flex">
           <div class="otherprojflexelement" id="projfleximage">
-            <img src="./images/codioful-formerly-gradienta-uDaW2aMISB4-unsplash.jpg">
+            <img src="./images/demoimage.png">
           </div>
           <div class="otherprojflexelement" id="projskills">
-            <img id="htmlbadge" src="./images/html5badge.svg">
-            <img id="cssbadge" src="./images/cssbadge.svg">
-            <img id="jsbadge" src="./images/javascript badge.svg">
-            <img id="githubbadge" src="./images/githubbadge.svg">
-            <img id="gitlabbadge" src="./images/gitlabbadge.svg">
+            <div id="badge"><img id="htmlbadge" src="./images/html5badge.svg"></div>
+            <div id="badge"><img id="cssbadge" src="./images/cssbadge.svg"></div>
+            <div id="badge"><img id="jsbadge" src="./images/javascript badge.svg"></div>
+            <div id="badge"><img id="githubbadge" src="./images/githubbadge.svg"></div>
+            <div id="badge"><img id="gitlabbadge" src="./images/gitlabbadge.svg"></div>
           </div>
           <div class="otherprojflexelement" id="projflexdesc">
             <h3>Project Title</h3>
-            <p>A short project description.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque sint dolore, qui beatae inventore, molestias ab exercitationem numquam architecto earum, molestiae nostrum commodi recusandae. Veritatis deleniti minus error praesentium delectus.</p>
           </div>
         </div>
         <div class="otherprojflexarea" id="proj4flex">
           <div class="otherprojflexelement" id="projfleximage">
-            <img src="./images/codioful-formerly-gradienta-uDaW2aMISB4-unsplash.jpg">
+            <img src="./images/demoimage.png">
           </div>
           <div class="otherprojflexelement" id="projskills">
-            <img id="htmlbadge" src="./images/html5badge.svg">
-            <img id="cssbadge" src="./images/cssbadge.svg">
-            <img id="jsbadge" src="./images/javascript badge.svg">
-            <img id="githubbadge" src="./images/githubbadge.svg">
-            <img id="gitlabbadge" src="./images/gitlabbadge.svg">
+            <div id="badge"><img id="htmlbadge" src="./images/html5badge.svg"></div>
+            <div id="badge"><img id="cssbadge" src="./images/cssbadge.svg"></div>
+            <div id="badge"><img id="jsbadge" src="./images/javascript badge.svg"></div>
+            <div id="badge"><img id="githubbadge" src="./images/githubbadge.svg"></div>
+            <div id="badge"><img id="gitlabbadge" src="./images/gitlabbadge.svg"></div>
           </div>
           <div class="otherprojflexelement" id="projflexdesc">
             <h3>Project Title</h3>
-            <p>A short project description.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt nihil blanditiis minima itaque rem doloribus beatae, quidem veniam deleniti fuga iusto hic voluptas distinctio quos est, repellat vel, quod ducimus!</p>
           </div>
         </div>
         <div class="otherprojflexarea" id="proj5flex">
           <div class="otherprojflexelement" id="projfleximage">
-            <img src="./images/codioful-formerly-gradienta-uDaW2aMISB4-unsplash.jpg">
+            <img src="./images/demoimage.png">
           </div>
           <div class="otherprojflexelement" id="projskills">
-            <img id="htmlbadge" src="./images/html5badge.svg">
-            <img id="cssbadge" src="./images/cssbadge.svg">
-            <img id="jsbadge" src="./images/javascript badge.svg">
-            <img id="githubbadge" src="./images/githubbadge.svg">
-            <img id="gitlabbadge" src="./images/gitlabbadge.svg">
+            <div id="badge"><img id="htmlbadge" src="./images/html5badge.svg"></div>
+            <div id="badge"><img id="cssbadge" src="./images/cssbadge.svg"></div>
+            <div id="badge"><img id="jsbadge" src="./images/javascript badge.svg"></div>
+            <div id="badge"><img id="githubbadge" src="./images/githubbadge.svg"></div>
+            <div id="badge"><img id="gitlabbadge" src="./images/gitlabbadge.svg"></div>
           </div>
           <div class="otherprojflexelement" id="projflexdesc">
             <h3>Project Title</h3>
-            <p>A short project description.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, adipisci alias, quos inventore, dolorem molestiae quibusdam necessitatibus enim quasi repellendus reprehenderit. Accusamus, praesentium libero. Voluptatum quisquam enim officia nam neque.</p>
           </div>
         </div>
       </section>
@@ -216,7 +259,6 @@
         </span>
       </a>
     </nav>
-
 
   </main>
 </body>
