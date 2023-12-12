@@ -49,8 +49,12 @@ nav#return .material-symbols-rounded {
 }
 nav#return .material-symbols-rounded:hover {
   color: #364859;
-  cursor: pointer;
+  cursor: pointer;  
+  transform: scale(1.5);
+  transition-timing-function: ease;
+  transition: 0.5s;
 }
+
 /* --- */
 
 /* general */
@@ -78,7 +82,7 @@ nav#return{
   font-weight: 400;
   letter-spacing: 20px;
   font-size: 70px;
-  padding:3% 0 0 0;
+  padding:4% 0 0 0;
 }
 
 h3{
@@ -97,7 +101,7 @@ h3{
   align-items: center;
   justify-content: space-around;
   width:100%;
-  height:100vh;
+  min-height:100vh;
   background-image: url(../images/anton-CtlZ68KBDIo-unsplash.jpg);
   background-position: center;
   background-size: cover;
@@ -113,19 +117,23 @@ header.cover h1#name a {
   background: url(https://i.pinimg.com/originals/84/d8/7e/84d87eb7e536135161c55887d878d44b.gif);
   background-size: cover;
   background-position: center;
-  -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   animation: title 5s ease 1;
 }
 
 #navbar{
   display:grid;
-  grid-template-columns: 180px 180px 180px;
+  /* grid-template-columns: 180px 180px 180px; */
+  grid-template-columns: 220px 220px;
   grid-template-rows: 1fr 1fr;
-  grid-template-areas: 
+  /* grid-template-areas: 
     "link1 link2 link3"
     "link4 link5 link6"
-  ;
+  ; */
+  grid-template-areas:
+  "link1 link2"
+  "link3 link4";
   align-items: center;
   align-content: center;
   padding:10px;
@@ -135,8 +143,8 @@ header.cover h1#name a {
 #navbar #link2{grid-area: link2;}
 #navbar #link3{grid-area: link3;}
 #navbar #link4{grid-area: link4;}
-#navbar #link5{grid-area: link5;}
-#navbar #link6{grid-area: link6;}
+/* #navbar #link5{grid-area: link5;}
+#navbar #link6{grid-area: link6;} */
 
 .navlink{
   display:grid;
@@ -165,7 +173,7 @@ header.cover h1#name a {
   border: rgba(0,0,0,0) solid 2px;
 }
 
-.navlink .link:hover, #return .a:hover{
+.navlink .link:hover{
   grid-area: text;
   font-family: 'Roboto Mono', monospaced;
   font-size: 15px;
@@ -179,34 +187,56 @@ header.cover h1#name a {
 }
 
 /* navbar outside of cover page */
+
+div#navtopheaderthing h1 {
+  flex-grow: 1;
+  margin: 10px;
+}
+
+div#navtopheaderthing h1 a{
+  font-family: 'Unica One', sans-serif;
+  font-size: 25px;
+  letter-spacing: 5px;
+  color:#364859;
+  cursor: pointer;
+}
+
+div#navtopheaderthing{
+  position: sticky;
+  display:flex;
+  align-items: center;
+  top: 0%;
+  background: #b6b3bce3 ;
+  border-radius: 0% 0% 30px 30px;
+  z-index: 100;
+  height: 70px;
+  justify-content: space-around;
+}
+
 #navtop{
+  flex-grow: 1.5;
   border-radius: 5px;
-  min-width: 50vw;
   width:30vw;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  position: sticky;
-  top:1%;
-  margin:auto;
-  z-index: 100;
+  /* border: #B6B3BC solid 2px; */
+  justify-content: space-evenly;
 }
 
 #navtop .navtoplink{
   display: flex;
+  /* min-width:150px; */
   margin:10px 20px;
-  justify-items: right;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  background: #CBC9CF;
+  /* border:#364859 solid 1.1px; */
   border-radius: 5px;
-  font-family: 'Roboto Mono', monospaced;
-  font-size: 10px;
-  font-weight: 550;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.navtoplink text{
+  font-family: 'Roboto Mono', sans-serif;
+  font-size: 15px;
   color: #364859;
-  overflow: hidden;
-  white-space: nowrap;
 }
 
 .navtoplink .material-symbols-rounded {
@@ -217,23 +247,18 @@ header.cover h1#name a {
   'opsz' 24;
   color: #364859;
   margin:5px;
-  font-size:14px;
+  font-size:15px;
 }
 
-.navtoplink .link{
-  color: #364859;
-  padding: 5px;
-  font-family: 'Roboto Mono', monospaced;
-  font-size: 14px;
-  font-weight: 550;
-  overflow: hidden;
+.navtoplink:hover{
+  transform: scale(1.5);
+  transition: 0.75s;
+  transition-timing-function: ease;
+  /* border:#950a68 solid 1.1px; */
 }
 
-.navtoplink, .navtoplink .link {
-  font-family: 'Roboto Mono', monospaced;
-  font-size: 10px;
-  font-weight: 550;
-  color: #364859;
+.navtoplink:hover text, .navtoplink:hover .material-symbols-rounded{
+  color:#5d7888;
 }
 
 /* pages */
@@ -242,10 +267,50 @@ header.cover h1#name a {
   border-radius: 15px;
 }
 
+.page-section#contact{
+  min-height:50vh;
+}
+
+.page-section#aboutme{
+  min-height:50vh;
+}
+
+/* aboutme page */
+section.secaboutme#profile{
+  width:80vw;
+  min-height:60vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#pfpcontainer{
+  background:#a3afb6;
+  margin: 0 7.5%;
+  width:600px;
+  height:600px;
+  border-radius: 200px 100px 300px 200px;
+  background-image: url(../images/pfp.png);
+  background-size: cover;
+  background-position: center;
+}
+
+#profiletext{
+  display:flex;
+  margin: 0 7.5%;
+  flex-direction: column;
+  max-width: 30%;
+}
+
+#profiletext h3, #profiletext p{
+  text-align: left;
+}
+
 /* projects page */
 #featureProj{
   display: grid;
-  margin: 15px 8%;
+  margin: 0 8% 5% 8%;
   min-height:60vh;
   max-height:70vh;
   align-self:center;
@@ -278,12 +343,20 @@ header.cover h1#name a {
 }
 
 .featureProjArea#image img:hover, .otherprojflexelement#projfleximage img:hover{
-  transition: 0.20s;
-  opacity: 0.75;
-  transition-timing-function: ease;
-  border:#970149 solid 4px;
   cursor: pointer;
+  transition:0.75s;
+  transition-timing-function: ease;
 }
+
+.featureProjArea#image img:not(:hover), .otherprojflexelement#projfleximage img:not(:hover){
+  transition: 0.75s;
+  transition-timing-function: ease;
+  opacity: 0.75;
+  scale:0.95;
+  border-radius: 15px;
+  filter:blur(5px);
+}
+
 
 .featureProjArea#title{
   grid-area: title;
@@ -397,15 +470,166 @@ header.cover h1#name a {
   text-align: left;
 }
 
+/* experience grid */
+p#fullCV{
+  font-size: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-family: 'Inter', sans-serif;
+}
+
+p#fullCV:hover{
+  cursor: pointer;
+  color:#5d7888;
+  font-weight: 700;
+  letter-spacing: 6px;
+  text-decoration: underline;
+  transition: 1s;
+  transition-timing-function: ease;
+
+}
 
 
+.experience#expgrid{
+  display: grid;
+  margin: 0 10vw;
+  grid-template-columns: 35vw 9vw 35vw;
+  grid-template-rows: repeat(6, 300px);
+  grid-template-areas:
+      "exp1 arrow emp1"
+      "emp2 arrow exp2"
+      "exp3 arrow emp3"
+      "emp4 arrow exp4"
+      "exp5 arrow emp5"
+      "emp6 arrow exp6";
+  justify-content: space-between;
+  align-items: start;
+  justify-items: center;
+}
 
+#exp1{grid-area:exp1;}
+#exp2{grid-area:exp2;}
+#exp3{grid-area:exp3;}
+#exp4{grid-area:exp4;}
+#exp5{grid-area:exp5;}
+#exp6{grid-area:exp6;}
+#exparrow{grid-area:arrow;}
+#emp1{grid-area:emp1;}
+#emp2{grid-area:emp2;}
+#emp3{grid-area:emp3;}
+#emp4{grid-area:emp4;}
+#emp5{grid-area:emp5;}
+#emp6{grid-area:emp6;}
 
+.expgriditem{
+  padding:15px;
+  border-radius: 10px;
+  display:grid;
+  min-height:90%;
+  width:90%;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 2fr 1fr 5fr 2fr;
+  grid-template-areas: 
+  "expdate expcomp"
+  "expdate exprole"
+  "expdate expdesc"
+  "expdate expskills"
+  ;
+  align-items: center;
+  justify-items: start;
+}
 
+.expgriditem:hover{
+  transition: 0.75s;
+  background-color: #5d78881f;
+  transition-timing-function: ease;
+  border-radius: 10px;
+  box-shadow: #36485942 5px 5px;
+  scale: 1.1;
+}
 
+.expdetails{
+  min-height:20px;
+  font-size:14px;
+  font-family: 'Inter', sans-serif;
+  text-align:left;
+}
 
+.expdetails#date{
+  grid-area: expdate;
+  color:#8999a8;
+  font-size: 10px;
+  letter-spacing:5px;
+  padding: 0 10px;
+  text-transform: uppercase;
+}
 
+.expdetails#company{
+  grid-area: expcomp;
+  font-weight: 600;
+  font-size: 22px;
+}
 
+.expdetails#role{
+  grid-area: exprole;
+  color:#8999a8;
+  font-size: 14px;
+  letter-spacing:5px;
+  text-transform: uppercase;
+}
+
+.expdetails#edesc{
+  grid-area: expdesc;
+}
+
+.expdetails#eskills{
+  grid-area: expskills;
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.expdetails#eskills #eskill{
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color:#8999a8;
+  border: #364859 solid 1px;
+  border-radius: 7px;
+  padding: 6px;
+  margin: 0 6px 0 0;
+  font-weight: 500;
+}
+
+.expgriditem:hover .expdetails#date,.expgriditem:hover .expdetails#eskills #eskill,.expgriditem:hover .expdetails#role{
+  color:#467bad;
+}
+
+/* contact page */
+div.cinfo{
+  display:flex;
+  justify-content: space-around;
+  min-height: 20vh;
+  min-width: 60vh;
+  margin: auto;
+}
+
+.cinfo .contactdetail{
+  width:auto;
+  height:auto;
+  padding:15px;
+  margin:5px;
+}
+
+.cinfo .contactdetail img{
+  scale: 2.5;
+  color:#364859;
+}
+
+.cinfo .contactdetail img:hover{
+  scale: 3;
+  transition:500ms ease;
+  color:#467bad;
+}
 
 
 /* MEDIA QUERIES */
@@ -459,7 +683,7 @@ header.cover h1#name a {
     mix-blend-mode: normal;
   }
   
-  #navtop, nav#return{
+  #navtop, nav#return, div#navtopheaderthing{
     display: none;
   }
 
@@ -473,9 +697,38 @@ header.cover h1#name a {
     font-size: 20px;
     letter-spacing: 3px;
   }
+
+  .experience#expgrid{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    justify-items: center;
+  }
 }
 
 @media only screen and (max-width:975px){
+
+  section.secaboutme#profile{
+    width:80vw;
+    min-height:60vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #pfpcontainer{
+    scale: 0.5;
+  }
+  
+  #profiletext{
+    display:flex;
+    margin: 0 7.5%;
+    flex-direction: column;
+    max-width: 80%;
+  }
+
+
   #featureProj{
     display: flex;
     flex-direction: column;
@@ -521,12 +774,12 @@ header.cover h1#name a {
 
   .featureProjArea#title h3{
     font-size: 25px;
+    text-align: center;
   }
   
   .featureProjArea#desc p{
     font-size: 14px;
     text-align: center;
-
   }
   
   #otherprojflex{
@@ -544,5 +797,13 @@ header.cover h1#name a {
 
   .otherprojflexelement#projflexdesc{
     justify-content: flex-start;
+  }
+
+  .expdetails#date{
+    writing-mode:vertical-rl;
+  }
+
+  div.cinfo{
+    flex-direction: column;
   }
 }
