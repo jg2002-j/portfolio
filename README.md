@@ -1,7 +1,7 @@
 # Unit 2 Challenge: Portfolio
 
 ## Jai Gandhi | Portfolio
-This website is a compilation of my work, as well as a short https://img.shields.io/badge/logo-javascript-blue?logo=javascript
+This website is a compilation of my work, as well as a short description of me and what I can do! :)
 
 ## Built with:
 - HTML5
